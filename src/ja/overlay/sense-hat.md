@@ -3,7 +3,7 @@
 type: board
 name: "Sense HAT"
 manufacturer: Raspberry Pi Foundation
-description: Add-on board that includes an 8×8 RGB LED matrix, 5-button joystick as well as IMU and environmental sensors 
+description: Add-on board that includes an 8×8 RGB LED matrix, 5-button joystick as well as IMU and environmental sensors
 url: https://www.raspberrypi.org/products/sense-hat/
 formfactor: 'HAT'
 pincount: 40
@@ -35,16 +35,16 @@ install:
     - 'i2c'
     - 'spi'
 -->
-#Sense HAT
+#センス・ハット (Sense HAT)
 
-The Sense HAT is an add-on board for Raspberry Pi comprising of a 8×8 RGB LED matrix, a five-button joystick and the following sensors:
+センス・ハットは、ラズベリーパイの拡張ボードで、8x8マトリクスのフルカラーLED、4方向＋1センターボタンのジョイスティックに加え、以下のセンサーから構成されます：
 
-Gyroscope, Accelerometer, Magnetometer, Temperature, Barometric pressure and Humidity.
+ジャイロスコープ、加速度計、地磁気計、温度計、気圧計、湿度計
 
-The shift register driving the LED Matrix is a LED2472G connected via an ATTINY88 to the SPI bus of the Pi. The Multi-Directional SKRHABE010 Switch/Joystick is similarly connected to the SPI bus.
+LEDマトリクスを駆動するシフトレジスタは、LED2472Gで、ATtiny88経由、パイのSPIバスに接続されています。4方向＋1センターボタンのSKRHABE010ジョイスティックも同様にSPIバスに接続されています。
 
-The sensors themselves operate (mostly) over the i2c bus:
+センサーは、（ほとんど）I2Cバスで動作します：
 
-The IMU (Gyroscope, Accelerometer, Magnetometer) through a LSM9DS1 found at i2c address 0x1c(0x1e),0x6a(0x6b), with Interrupts on the ATTINY88.
+慣性計測ユニット（ジャイロスコープ、加速度計、地磁気計）は、LSM9DS1を通じてI2Cアドレス0x1c(0x1e)と0x6a(0x6b)にあり、ATtiny88の割り込みを使います。
 
-Environemental sensors are represented by a LPS25H Pressure+Temperature sensor at address 0x5c and by a HTS221 Humidity+Temp sensor at 0x5f on the i2c bus.
+環境センサーは、I2Cバス上の気圧／温度センサーLPS25H（0x5c）、湿度／温度センサーHTS221（0x5f）で構成されます。
